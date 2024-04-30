@@ -58,3 +58,15 @@ jobs:
           push: true
           tags: '${{ steps.meta.outputs.tags}}'
           labels: '${{ steps.meta.outputs.labels}}'
+  deploy:
+    name: Deploy Python application
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - name: Deploy to Render
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: https://api.render.com/v1/services/srv-coomuvgl5elc738kkbjg/deploys
+          method: POST
+          bearerToken: '${{ secrets.RENDER_TOKEN }}'
+          data: '{"imageUrl":"${{ needs.build.outputs.image-tag }}"}'

@@ -6,4 +6,4 @@ class TestHealthEndpointStatusCode(unittest.TestCase):
         apiTest = app.test_client(self)
         resp = apiTest.get('/health', content_type='application/json')
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json, {'status':'OK'})
+        self.assertEqual(resp.json, {'status':'UP'})
