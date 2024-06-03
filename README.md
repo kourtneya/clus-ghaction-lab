@@ -732,7 +732,7 @@ Before we can perform the CD part of our CI/CD pipeline, we need to have an envi
 
     2. **Create API Key:** On the Settings page, click `API Keys` in the left side bar. Then click `Create API Key` button. Enter a name for the API Key in the pop up and click `Create API Key`.
 
-    3. `Copy API Key:` The API Key will be displayed for you to copy. Copy and store it somewhere we will use this soon. This key will only be displayed once. Once copied, click `Done`.
+    3. **Copy API Key:** The API Key will be displayed for you to copy. Copy and store it somewhere we will use this soon. This key will only be displayed once. Once copied, click `Done`.
 
 4. **Create New Web Service:** In Render a Web Service is a type of deployment that will be always running. This is suitable for the python application we have created because of its RESTful API nature. To create a service, click `New +` at the top right corner next to your profile. Then click `Web Service`.
     1. **Existing Image:** On the `Create a Web Service` page, choose the `Deploy an existing image from a registry` option, then click `Next`.
@@ -747,8 +747,8 @@ Before we can perform the CD part of our CI/CD pipeline, we need to have an envi
 
     5. **Specify Instance Type:** Select the instance type of `Free`, then click the `Create Web Service` button at the bottom of the page.
 
-5. **Copy Service ID:** Once the Web Service has been created, in the URL address copy the service ID and note it somewhere for later use. The service ID begins with `srv-`. This service ID will be used in the CI/CD when deploying new images.
-   > https://dashboard.render.com/web/`srv-coogbeev3ddc738ns11g`/deploys/dep-
+5. **Copy Service ID:** Once the Web Service has been created, in the URL address copy the service ID and note it somewhere for later use. The service ID begins with `srv-`and ends at the `/`. This service ID will be used in the CI/CD when deploying new images.
+   > For Example, `https://dashboard.render.com/web/`srv-coogbeev3ddc738ns11g`/deploys/dep-`
     
 6. **Verify Deployment:** When the service is deployed and ready for viewing, a green live label will be presented.
     ![](image/render_session.png)
