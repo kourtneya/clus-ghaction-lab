@@ -258,7 +258,7 @@ dependencies required to run the application must be installed within the image.
 
 10. **Expose Application Port:** When the python application starts, the web server runs on port 5000. To access the application in the container, port 5000 must be exposed.
     ```dockerfile
-    EXPOSE 500
+    EXPOSE 5000
     ```
 
 11. **Define Run Command:** The following line tells Docker what command to use start
