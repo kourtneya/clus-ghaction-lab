@@ -1,6 +1,6 @@
 ![](image/clus2024_lab.png)
 
-# Let's Automate with GitHub Actions (LABRCT-1151)
+# Let's Automate with GitHub Actions (LABCRT-1151)
 ### Speakers: Kourtney Barnes
 
 <br>
@@ -121,7 +121,7 @@ demo). Name should be unique and contain no spaces.
 Let’s create a small RESTful API with a health check endpoint
 
 1. **Open Code Editor:** Open any text editor on the local machine. 
-    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studo Code to the repository's location. 
+    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studio Code to the repository's location. 
 
 2. **Create a New File:** If necessary, click `File` on the top left corner in the tool bar. In the dropdown menu select `New -> File` to create `app.py` file. 
 
@@ -220,7 +220,7 @@ Let’s create a small RESTful API with a health check endpoint
 Now that we have created a repository and a small application let’s embark on a journey to create the CI/CD pipeline. Let’s begin with building a Docker image.
 
 1. **Open Code Editor:** Open any text editor on the local machine. 
-    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studo Code to the repository's location. 
+    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studio Code to the repository's location. 
 
 2. **Create a New File:** If necessary, click `File` on the top left corner in the tool bar. In the dropdown menu select `New -> File` to create `requirements.txt` file. 
 
@@ -232,7 +232,7 @@ Now that we have created a repository and a small application let’s embark on 
 4. **Save File:** Save the file in your local repository directory as `requirements.txt`. This file will be used later.
 
 5. **Create a New File:** If necessary, click `File` on the top left corner in the tool bar. In the dropdown menu select `New -> File` to create `Dockerfile` file.
-    > It's important to stote IDEs, may added a file extension. But it is very very important to store this file with no file extension
+    > It's important to note IDEs, may added a file extension. But it is very very important to store this file with no file extension
 
 6. **Define base Image:** In a Dockerfile, the first line is always the specification of the base image. Since this is a Python application, the official python image would be appropriate.
     ```txt
@@ -241,7 +241,7 @@ Now that we have created a repository and a small application let’s embark on 
 
 7. **Set a Working Directory:** Setting a working directory inside of the docker image
 where the code will be place is a best practice. In a Dockerfile, the first line is always the specification of the base image. Since this is a Python application, the official python image would be appropriate.
-    ```tdockerfilext
+    ```dockerfile
     WORKDIR /app
     ```
 
@@ -281,7 +281,7 @@ the application when running the docker image.
 13. **Save File:** Save the file in your local repository directory as “Dockerfile”. This name is required.
 
 14. Open any text editor on the local machine. 
-    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studo Code to the repository's location.
+    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studio Code to the repository's location.
 
 15. **Navigate to Local Repository:** If you are not already at the repository location in the Terminal, open `Terminal` (Task 3 – Step 3), and use `cd` to navigate to your cloned repository.
 
@@ -483,7 +483,7 @@ merged to the main branch of the repository.
 To create a Test step in our CI/CD pipeline we need to create a Unit Test for our python application.
 
 1. **Open Code Editor:** *(If its not already open)* Open any text editor on the local machine. 
-    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studo Code to the repository's location. 
+    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studio Code to the repository's location. 
 
 2. **Create a New File:** If necessary, click `File` on the top left corner in the tool bar. In
 the dropdown menu select `New -> File` to create `test_app.py` file.
@@ -538,7 +538,7 @@ the dropdown menu select `New -> File` to create `test_app.py` file.
 Now that we have a unit test within our code base, let’s get the CI/CD pipeline to automatically run the test.
 
 1. **Open Code Editor:** *(If its not already open)* Open any text editor on the local machine. 
-    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studo Code to the repository's location. 
+    >The lab machines at Cisco Live have Visual Studio Code installed. In the `Terminal`, type `code . ` to open Visual Studio Code to the repository's location. 
 
 2. **Navigate to the YAML file:** Open the `ci.yaml` file created in Task 6.
 
@@ -962,7 +962,7 @@ command in terminal:
 
     3. **Access Web Service:** On the Dashboard page, click the service that’s deployed under the `Service Name`
 
-    4. **Live Update**: The Deployment may take some time to update. Please wait until the deployment has finished. You will see a green `Live` label on the webservice
+    4. **Live Update**: The Deployment may take some time to update. Please wait until the deployment has finished. You will see a green `Live` label on the web service
         ![](image/render_session.png)
 
     5. **Navigate to Python Application:** On the Web Service page, click the URL listed under the Web Service name. On first launch, a `Not Found` page will appear. To access the health endpoint, append `/health` to URL and press `Enter`.
