@@ -1497,7 +1497,7 @@ Navigate to the repository in GitHub and click on the `Actions` tab on the GitHu
     
 <br>
 
-**Congratulations:** You have now created an application using Python and a full CI/CD pipeline using GitHub Actions. You can view the entire project at [https://github.com/kourtneya/clus-ghaction-lab](https://github.com/kourtneya/clus-ghaction-lab)
+**Congratulations:** You have now created an application using Python and a full CI/CD pipeline using GitHub Actions. You can view the entire project at [https://github.com/kourtneya/ghaction-lab](https://github.com/kourtneya/ghaction-lab)
 
 ---
 
