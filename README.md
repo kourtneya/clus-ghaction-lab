@@ -21,7 +21,7 @@ Throughout the lab feel free to experiment with different configurations to deep
 
 ## Workflow Diagram
 
-  ![](./assets/lab_arch.png){ width="880" }
+  ![](./assets/lab_arch.png)ghaction-lab
 
 ## Lab Requirements 
 - Visual Studio Code (Text Editor)
@@ -43,7 +43,7 @@ This lab is not intended to be a practice exam for the DevNet Associate exam. It
 In this task you will need to login to your GitHub account. GitHub is the code repository where you will store your code, CI/CD pipeline, and run the automated workflows. Don't have an account? No worries, steps are provided to create a new and free account. 
 
 ## Step 1: Navigate to GitHub
-In a new browser tab, type [https://github.com](https://github.com){:target="_blank"} or simple click the hyperlink to open in a new tab. 
+In a new browser tab, type [https://github.com](https://github.com) or simple click the hyperlink to open in a new tab. 
 
 ## Step 2a: For Existing GitHub Account Users 
 1. On the home page, click the `Sign In` button at the top right corner of the page. 
@@ -86,7 +86,7 @@ The goal of this task is to create a repository within GitHub that will store an
     2. **Visibility:** indicates who can view the repository. Leave the `Public` radio button selected. 
         > **Public:** indicates anyone will have visibility to the information within the repository. Only you and collaborators you invites can make changes to the code within the repository 
 
-        **Private:** will only be visible to you and the collaborators you invite. Only you and the collaborators you invite can make changes to the code within the repository
+        > **Private:** will only be visible to you and the collaborators you invite. Only you and the collaborators you invite can make changes to the code within the repository
 
     3. **Add README** Click the `Add a README file` checkbox under `Initialize this repository with:` section
 
@@ -98,7 +98,7 @@ The goal of this task is to create a repository within GitHub that will store an
 
 **Congratulations!!** You have now created a GitHub Repository.
 
---
+---
 
 # Task 3 - Clone Repository
 To begin inserting code into your repository that was created in [Task 2](task_2.md), you will need to create the reference of the repository on your local machine. To do this you will use a tool called Git to interact with the repository. Git is a version control system (VCS) that manages the history of changes to files. 
@@ -588,7 +588,7 @@ Save the file by clicking save in the File toolbar option, or by pressing
 
 3. In Visual Code, you should see the folders listed in the left toolbar. 
     
-      ![](./assets/github_workflows_directory.png){ width="500" }
+      ![](./assets/github_workflows_directory.png)
     
 
 ## Step 12: Created Workflow File
@@ -817,9 +817,9 @@ git add .
 ## Step 16: Commit Changes 
 Once all files have been added to the staging area, its now time to commit that changes in the staging area. The `git commit -m "message"` command will create a snapshot of the files the files in the staging area. The snapshot will be identified with a unique identifier called a **commit hash**. This hash will be used when tagging the docker image in the build step. To commit the files in the staging are execute the following command
 
-    ```bash
-    git commit -m "Adding CI/CD Build Pipeline"
-    ```
+```bash
+git commit -m "Adding CI/CD Build Pipeline"
+```
 
 ## Step 17: Push Commit to GitHib Repository
 Execute the command below to upload your local changes to GitHub
@@ -831,13 +831,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. A green check should be visible on `Build & Publish Docker Image` when complete.
     
-      ![](./assets/ghaction_build.png){ width="880" }
+    ![](./assets/ghaction_build.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-      ![](./assets/ghaction_packages.png){ width="880" }
+    ![](./assets/ghaction_packages.png)ghaction-lab
     
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
@@ -1173,13 +1173,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Build & Publish Docker Image` doesn't start until the `Python Unit Test` job finishes. A green check should be visible on `Python Unit Test` and `Build & Publish Docker Image` when both are complete.
     
-      ![](./assets/ghaction_test.png){ width="880" }
+    ![](./assets/ghaction_test.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-      ![](./assets/ghaction_packages.png){ width="880" }
+    ![](./assets/ghaction_packages.png)ghaction-lab
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
 
@@ -1222,12 +1222,12 @@ In Render a Web Service is a type of deployment that will continue to run until 
 
 3. In previous tasks, you have created CI/CD pipeline that build and published a docker image. In a new tab in your browser, navigate to your repository in GitHub. On the right side bar of the repository page, click the container name that is specified under `Packages`
     
-      ![](./assets/ghaction_packages.png){ width="880" }
+    ![](./assets/ghaction_packages.png)ghaction-lab
     
 
 4. Copy the image URL specified in the docker command shown. *(e.g. “ghcr.io/kourtneya/test-repository:sha- 940d746”)*
     
-        ![](./assets/contianer_url.png){ width="880" }
+    ![](./assets/contianer_url.png)ghaction-lab
     
 
 5. Navigate back to the Render browser tab and for the `Image URL` on the `Deploy an image` form, paste the image URL you copied from GitHub. Then click `Next`.
@@ -1243,12 +1243,12 @@ Before moving on to view the python application in the browser, let's get some o
 ## Step 5: Verify Deployment 
 When the web service is deployed and ready for the viewing, a green label with the text `Live` will be presented
     
-        ![](./assets/render_session.png){ width="880" }
+    ![](./assets/render_session.png)ghaction-lab
 
 ## Step 6: Visit the Python Application in Browser
 1. Underneath the web service name is the URL to the python application. Click the URL. The first page will be `Not Found`. This is because our python application does not have a route to the root path
     
-        ![](./assets/render_url.png){ width="880" }
+    ![](./assets/render_url.png)ghaction-lab
     
 2. To view the health, at the end of the URL type `/health`, then press Enter. You will see the JSON response
 
@@ -1493,7 +1493,7 @@ git push origin main
 ## Step 10: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Deploy Python application` doesn't start until the `Build & Publish Docker Image` job finishes. A green check should be visible on `Python Unit Test`, `Build & Publish Docker Image`, and `Deploy Python application` when all are complete.
     
-      ![](./assets/ghaction_deploy.png){ width="880" }
+    ![](./assets/ghaction_deploy.png)ghaction-lab
     
 <br>
 
