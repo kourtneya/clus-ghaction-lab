@@ -831,13 +831,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. A green check should be visible on `Build & Publish Docker Image` when complete.
     
-    ![](./assets/ghaction_build.png)ghaction-lab
+![](./assets/ghaction_build.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-    ![](./assets/ghaction_packages.png)ghaction-lab
+![](./assets/ghaction_packages.png)ghaction-lab
     
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
@@ -1173,13 +1173,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Build & Publish Docker Image` doesn't start until the `Python Unit Test` job finishes. A green check should be visible on `Python Unit Test` and `Build & Publish Docker Image` when both are complete.
     
-    ![](./assets/ghaction_test.png)ghaction-lab
+![](./assets/ghaction_test.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-    ![](./assets/ghaction_packages.png)ghaction-lab
+![](./assets/ghaction_packages.png)ghaction-lab
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
 
@@ -1493,7 +1493,7 @@ git push origin main
 ## Step 10: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Deploy Python application` doesn't start until the `Build & Publish Docker Image` job finishes. A green check should be visible on `Python Unit Test`, `Build & Publish Docker Image`, and `Deploy Python application` when all are complete.
     
-    ![](./assets/ghaction_deploy.png)ghaction-lab
+![](./assets/ghaction_deploy.png)ghaction-lab
     
 <br>
 
