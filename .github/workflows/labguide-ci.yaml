@@ -37,7 +37,7 @@ jobs:
       - name: Build & Publish Docker Image to GitHab Package
         uses: docker/build-push-action@v5
         with: 
-          context: "{{defaultContext}}:lab-guide" 
+          context: ./lab-guide 
           push: true
           tags: '${{ steps.meta.outputs.tags}}'
           labels: '${{ steps.meta.outputs.labels}}'
