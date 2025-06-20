@@ -1,0 +1,43 @@
+name: Interactive Lab Guide CI Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+env:
+  APP_NAME: '${{ github.repository }}'
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    name: Build & Publish Docker Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image-tag: '${{ steps.meta.outputs.tags }}'
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Login to Container Registry 
+        uses: docker/login-action@v3
+        with:
+          registry: '${{ env.REGISTRY }}'
+          username: '${{ github.actor }}'
+          password: '${{ secrets.GITHUB_TOKEN}}'
+      - name: Extract metadata for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with: 
+          images: '${{ env.REGISTRY }}/${{ env.APP_NAME }}-guide'
+          tags: | 
+            type=sha, format=short
+      - name: Build & Publish Docker Image to GitHab Package
+        uses: docker/build-push-action@v5
+        with: 
+          context: "{{defaultContext}}:lab-guide" 
+          push: true
+          tags: '${{ steps.meta.outputs.tags}}'
+          labels: '${{ steps.meta.outputs.labels}}'

@@ -1,0 +1,27 @@
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+.md-grid {
+    max-width: 1440px;
+}
+
+:root {
+    /* --md-primary-fg-color: rgb(11, 23, 44); */
+    --md-primary-fg-color: rgb(25, 26, 23);
+    --md-accent-fg-color: #b2be8e;
+}
+
+[data-md-color-scheme="default"] {
+    --md-typeset-a-color: #85a987;
+    --md-accent-fg-color: #b2be8e;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #85a987;
+    --md-accent-fg-color: #b2be8e;
+}

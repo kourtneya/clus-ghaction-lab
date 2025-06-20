@@ -1,0 +1,90 @@
+---
+site_name: "Lab Guide - GitHub Actions"
+site_description: "Let's Automate with GitHub Actions"
+site_author: "Kourtney Barnes"
+copyright: Copyright &copy; 2025 Viridiom
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - content.code.copy
+    - toc.integrate
+  custom_dir: docs/overrides
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: template_assets/viridiom_logo.png
+  favicon: template_assets/viridiom_logo.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: fade
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      skip_classes:
+      - custom-skip-class-name
+      auto_caption: true
+      caption_position: top
+markdown_extensions:
+  - md_in_html
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Home: index.md
+  - Lab:
+      - Overview: overview.md
+      - Task 1 - GitHub Login/Sign Up: task_1.md
+      - Task 2 - Create Repository: task_2.md
+      - Task 3 - Clone Repository: task_3.md
+      - Task 4 - Create Python Application: task_4.md
+      - Task 5 - Push Python Application: task_5.md
+      - Task 6 - GitHub Actions Build Pipeline: task_6.md
+      - Task 7 - Python Unit Test: task_7.md
+      - Task 8 - GitHub Actions Test Pipeline: task_8.md
+      - Task 9 - Render Environment: task_9.md
+      - Task 10 - GitHub Actions Deployment Pipeline: task_10.md
+      - Conclusion: conclusion.md
+
+dev_addr: "0.0.0.0:8000"

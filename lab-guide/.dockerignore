@@ -1,0 +1,7 @@
+.github/
+assets/
+.gitignore
+app.py
+README.md 
+requirements.txt
+test_app.py
