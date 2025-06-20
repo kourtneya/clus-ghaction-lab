@@ -50,6 +50,7 @@ jobs:
         with: 
           images: '${{ env.REGISTRY }}/${{ env.APP_NAME }}'
           tags: | 
+            latest
             type=sha, format=short
       - name: Build & Publish Docker Image to GitHab Package
         uses: docker/build-push-action@v5
