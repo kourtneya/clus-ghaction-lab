@@ -12,6 +12,21 @@ Upon completion of this lab, you will be able to:
 - Understand CI/CD fundamentals
 - Configure a CI/CD Pipeline with GitHub Actions
 
+## Interactive Lab Guide
+For a better lab guide experience perform the following steps. Docker is required for this experience 
+
+1. Open a terminal window
+    - **MacOS:** Press the Command & Space buttons on the keyboard, type `Terminal` and press enter
+
+    - **Windows:** Click the `Start` button *(usually Windows icon)* at the bottom left corner of the screen. Type `cmd` and press enter
+
+2. Execute the docker run command, in a 
+    ```bash
+    docker run -d --name gh_action_lab -p 8086:8000 ghcr.io/kourtneya/ghaction-lab-guide:latest
+    ```
+
+3. Navigate to [http://localhost:8086](http://localhost:8086) in your web browser of choice
+
 ## Scenario
 In this lab activity, you will have gained practical skills in setting up a CI/CD pipeline for a Python application. You will create a small application and leverage GitHub Actions, a powerful CI/CD automation tool, to implement a robust CI/CD pipeline that will seamlessly integrate with your GitHub repository. In the CI/CD pipeline you will create an automation to build, test, and deploy your application. You will utilize a version control system in Git to publish your changes to the repository that will kick off the CI/CD automation. You will also have gain experience in containerization by building a docker image to deploy the python application. 
 
@@ -21,7 +36,7 @@ Throughout the lab feel free to experiment with different configurations to deep
 
 ## Workflow Diagram
 
-  ![](./assets/lab_arch.png)ghaction-lab
+  ![](./lab-guide/docs/assets/lab_arch.png)ghaction-lab
 
 ## Lab Requirements 
 - Visual Studio Code (Text Editor)
@@ -588,7 +603,7 @@ Save the file by clicking save in the File toolbar option, or by pressing
 
 3. In Visual Code, you should see the folders listed in the left toolbar. 
     
-      ![](./assets/github_workflows_directory.png)
+      ![](./lab-guide/docs/assets/github_workflows_directory.png)
     
 
 ## Step 12: Created Workflow File
@@ -831,13 +846,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. A green check should be visible on `Build & Publish Docker Image` when complete.
     
-![](./assets/ghaction_build.png)ghaction-lab
+![](./lab-guide/docs/assets/ghaction_build.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-![](./assets/ghaction_packages.png)ghaction-lab
+![](./lab-guide/docs/assets/ghaction_packages.png)ghaction-lab
     
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
@@ -1173,13 +1188,13 @@ git push origin main
 ## Step 18: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Build & Publish Docker Image` doesn't start until the `Python Unit Test` job finishes. A green check should be visible on `Python Unit Test` and `Build & Publish Docker Image` when both are complete.
     
-![](./assets/ghaction_test.png)ghaction-lab
+![](./lab-guide/docs/assets/ghaction_test.png)ghaction-lab
     
 
 ## Step 19: Verify Docker Image in Packages
 On the main page that is the **Code** tab of the repository, at the right side of the page you should see an image underneath `Packages`. 
     
-![](./assets/ghaction_packages.png)ghaction-lab
+![](./lab-guide/docs/assets/ghaction_packages.png)ghaction-lab
 
 >**NOTE:** The name of the image underneath Packages should be the name of your repository.
 
@@ -1222,12 +1237,12 @@ In Render a Web Service is a type of deployment that will continue to run until 
 
 3. In previous tasks, you have created CI/CD pipeline that build and published a docker image. In a new tab in your browser, navigate to your repository in GitHub. On the right side bar of the repository page, click the container name that is specified under `Packages`
     
-    ![](./assets/ghaction_packages.png)ghaction-lab
+    ![](./lab-guide/docs/assets/ghaction_packages.png)ghaction-lab
     
 
 4. Copy the image URL specified in the docker command shown. *(e.g. “ghcr.io/kourtneya/test-repository:sha- 940d746”)*
     
-    ![](./assets/contianer_url.png)ghaction-lab
+    ![](./lab-guide/docs/assets/contianer_url.png)ghaction-lab
     
 
 5. Navigate back to the Render browser tab and for the `Image URL` on the `Deploy an image` form, paste the image URL you copied from GitHub. Then click `Next`.
@@ -1243,12 +1258,12 @@ Before moving on to view the python application in the browser, let's get some o
 ## Step 5: Verify Deployment 
 When the web service is deployed and ready for the viewing, a green label with the text `Live` will be presented
     
-    ![](./assets/render_session.png)ghaction-lab
+    ![](./lab-guide/docs/assets/render_session.png)ghaction-lab
 
 ## Step 6: Visit the Python Application in Browser
 1. Underneath the web service name is the URL to the python application. Click the URL. The first page will be `Not Found`. This is because our python application does not have a route to the root path
     
-    ![](./assets/render_url.png)ghaction-lab
+    ![](./lab-guide/docs/assets/render_url.png)ghaction-lab
     
 2. To view the health, at the end of the URL type `/health`, then press Enter. You will see the JSON response
 
@@ -1493,7 +1508,7 @@ git push origin main
 ## Step 10: View GitHub Action Status
 Navigate to the repository in GitHub and click on the `Actions` tab on the GitHub tool bar. Click on the latest workflow to view status. Notice how the `Deploy Python application` doesn't start until the `Build & Publish Docker Image` job finishes. A green check should be visible on `Python Unit Test`, `Build & Publish Docker Image`, and `Deploy Python application` when all are complete.
     
-![](./assets/ghaction_deploy.png)ghaction-lab
+![](./lab-guide/docs/assets/ghaction_deploy.png)ghaction-lab
     
 <br>
 
